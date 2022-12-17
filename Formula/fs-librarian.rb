@@ -8,8 +8,11 @@ class FsLibrarian < Formula
   head "https://github.com/jasonrogena/librarian.git", branch: "main"
 
   depends_on "make" => :build
+  depends_on "rustup-init" => :build
 
   def install
+    system "#{Formula["rustup-init"].bin}/rustup-init", "-y", "--no-modify-path"
+    ENV.prepend_path "PATH", HOMEBREW_CACHE/"cargo_cache/bin"
     system "make", "build"
     bin.install "target/release/fs-librarian"
   end
