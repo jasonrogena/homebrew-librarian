@@ -2,8 +2,8 @@ class FsLibrarian < Formula
   desc "Runs pre-configured commands against a group of files that match some filters"
   homepage "https://github.com/jasonrogena/librarian"
   url "https://github.com/jasonrogena/librarian.git",
-    tag:      "v0.3.4",
-    revision: "18f1a7369591a1b2f57dce388bc333796b528584"
+    tag:      "v0.3.2",
+    revision: "06349183a01f87171d9a590f64ea59005c292e11"
   license "MIT"
   head "https://github.com/jasonrogena/librarian.git", branch: "main"
 
